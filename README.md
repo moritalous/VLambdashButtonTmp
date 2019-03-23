@@ -1,5 +1,7 @@
 # VLambdashButton (Lambda version of Virtual Dash Button)
 
+![Image](screenshot/image.png)
+
 ## Usage
 
 1. Open `Setting`. Setup AWS credentials and region.
