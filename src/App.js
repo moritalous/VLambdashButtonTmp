@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter basename='/VLambdashButtonTmp'>
       <header >
-        <div style={{ position: 'fixed', display:'flex', alignItems:'center', justifyContent:'center', width: '100%', height:'40px', top:'0px', textAlign: 'center', background:'white', borderBottom:'1px grey solid'}}>
+        <div style={{ position: 'fixed', display:'flex', alignItems:'center', justifyContent:'center', width: '100%', height:'40px', top:'0px', textAlign: 'center', background:'white', borderBottom:'1px grey solid', zIndex:'99'}}>
         <Link to='/'>Home</Link> /
         <Link to='/Setting'>Setting</Link> /
         <Link to='/AddFunction'>Add</Link>
