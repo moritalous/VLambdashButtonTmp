@@ -16,7 +16,7 @@ function ButtonList(){
     let list = []
     for(let f of functions) {
       console.log(f)
-      list.push(<DashButton key={f.functionName}>{f}</DashButton>)
+      list.push(<DashButton key={Math.random()}>{f}</DashButton>)
     }
     setItem(list)  
   }, [])
@@ -26,7 +26,7 @@ function ButtonList(){
 
   return(
     <div style={{width:'100%'}}>
-      <div style={{width:'fit-content', textAlign:'left', margin:'auto'}}>
+      <div style={{width:'100%', display:'flex', flexWrap:'wrap', justifyContent:'center'}}>
       {item}
       </div>
       <br></br>

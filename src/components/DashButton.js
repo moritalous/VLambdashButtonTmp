@@ -24,7 +24,7 @@ function DashButton(props) {
   const [message, setMessage] = useState([''])
 
   return (
-    <div>
+    <div style={{width:'280px', margin:'4px'}}>
       <div className='container1' onClick={() => confirmInvoke(functionName, description, runtime, setMessage)}>
         <div className='container2' >
           <div className='label-area'>
@@ -44,9 +44,8 @@ function DashButton(props) {
 function confirmInvoke(functionName, description, runtime, setMessage) {
   let answer = window.confirm('Invoke?')
 
-  setMessage('Invoke...')
-
   if (answer) {
+    setMessage('Invoke...')
     invoke(functionName, {}).then(function (result) {
       let message = []
       message.push(<div>StatusCode: {result.StatusCode}</div>)

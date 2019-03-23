@@ -18,8 +18,8 @@
   height: 100%;
   border-radius: 57.2px;
   border: solid #879495 3px;
-  background-color: #101010;
   color: #DB6613;
+  background:repeating-linear-gradient(#101010 0px,#101010 10px,#202020 10px, #202020 15px);
 }
 
 .button-img {
