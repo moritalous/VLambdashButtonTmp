@@ -8,17 +8,18 @@ import AddFunction from './components/AddFunction'
 function App() {
   return (
     <BrowserRouter basename='/VLambdashButtonTmp'>
-      <div style={{ width: '100%', textAlign: 'center' }}>
+      <header >
+        <div style={{ position: 'fixed', display:'flex', alignItems:'center', justifyContent:'center', width: '100%', height:'40px', top:'0px', textAlign: 'center', background:'white', borderBottom:'1px grey solid'}}>
         <Link to='/'>Home</Link> /
         <Link to='/Setting'>Setting</Link> /
         <Link to='/AddFunction'>Add</Link>
-
-        <hr></hr>
-
+        </div>
+      
+      </header>
+      <div style={{paddingTop: '48px', textAlign: 'center'}}>
         <Route exact path='/' component={ButtonList} />
         <Route path='/Setting' component={Setting} />
         <Route path='/AddFunction' component={AddFunction} />
-
       </div>
     </BrowserRouter>
   );
