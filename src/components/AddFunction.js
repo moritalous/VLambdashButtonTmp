@@ -13,7 +13,14 @@ function AddFunction(){
 
   useEffect(() => {
     listFunstions().then(function(result) {
-      for(let f of result.Functions) {
+
+      let sortedFunction = result.Functions.sort(function(a, b){
+        if(a.LastModified < b.LastModified) return 1;
+        if(a.LastModified > b.LastModified) return -1;
+        return 1;
+      })
+
+      for(let f of sortedFunction) {
         list.push(<AddFunctionItem key={f.FunctionName}>{f}</AddFunctionItem>)
       }
       setItem(list)
@@ -21,7 +28,7 @@ function AddFunction(){
   }, [])
 
   return(
-    <div>
+    <div style={{width:'fit-content', textAlign:'left', margin:'auto'}}>
       {item}
     </div>
   );

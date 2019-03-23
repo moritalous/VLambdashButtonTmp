@@ -20,15 +20,22 @@ function Setting(){
     }
 
     return (
-      <div>
-        <input type="text" id="aws_access_key_id" value={accessKeyId} onChange={(e) => setAccessKeyId(e.target.value)}></input>
+      <div style={{width:'fit-content', textAlign:'left', margin:'auto'}}>
+        Access Key ID
         <br></br>
-        <input type="text" id="aws_secret_access_key" value={secretAccessKey} onChange={(e) => setSecretAccessKey(e.target.value)}></input>
+        <input type="text" style={{width:'100%'}} id="aws_access_key_id" value={accessKeyId} onChange={(e) => setAccessKeyId(e.target.value)}></input>
         <br></br>
-        <select onChange={(e) => setRegion(Const.REGIONS[e.target.selectedIndex])} defaultValue={region}>
+        Secret Access Key
+        <br></br>
+        <input type="text" style={{width:'100%'}} id="aws_secret_access_key" value={secretAccessKey} onChange={(e) => setSecretAccessKey(e.target.value)}></input>
+        <br></br>
+        Region
+        <br></br>
+        <select style={{width:'100%'}} onChange={(e) => setRegion(Const.REGIONS[e.target.selectedIndex])} defaultValue={region}>
         {option}
         </select>
-        <button onClick={() => save(accessKeyId, secretAccessKey, region)}>save</button>
+        <br></br><br></br>
+        <button style={{width:'100%'}} onClick={() => save(accessKeyId, secretAccessKey, region)}>Save</button>
       </div>
     );
 }

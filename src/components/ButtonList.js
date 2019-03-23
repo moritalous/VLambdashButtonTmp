@@ -18,13 +18,21 @@ function ButtonList(){
       console.log(f)
       list.push(<DashButton key={f.functionName}>{f}</DashButton>)
     }
-    setItem(list)
+    setItem(list)  
   }, [])
 
+  let emptyHiddenStyle = (item.length> 0) ? {visibility:'visible'} : {visibility:'hidden'}
+  let emptyVisibleStyle = (item.length> 0) ? {visibility:'hidden'} : {visibility:'visible'}
+
   return(
-    <div style={{width:'100vw'}}>
+    <div style={{width:'100%'}}>
+      <div style={{width:'fit-content', textAlign:'left', margin:'auto'}}>
       {item}
-      <button onClick={() => {clear();setItem([])}}>Remove All LambdashButton</button>
+      </div>
+      <br></br>
+      <button style={emptyHiddenStyle} onClick={() => {clear();setItem([])}}>Remove All LambdashButton</button>
+      
+      <div style={emptyVisibleStyle}>First, Setting. Next, Add.</div>
     </div>
   );
 }

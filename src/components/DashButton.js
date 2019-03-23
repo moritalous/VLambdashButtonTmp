@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-// import ReactDOM from 'react-dom';
+import React, { useState } from 'react';
 
 import Const from '../Const'
 import logo from '../AWS-Lambda_Lambda-Function_light-bg.png'
@@ -8,7 +7,7 @@ import './DashButton.css';
 import AWS from 'aws-sdk';
 
 const storage = localStorage;
-    
+
 AWS.config.update({
   accessKeyId: storage.getItem(Const.ACCESS_KEY),
   secretAccessKey: storage.getItem(Const.SECRET_KEY),
@@ -22,9 +21,9 @@ function DashButton(props) {
   const description = f.description
   const runtime = f.runtime
 
-  const [message, setMessage] = useState('')
+  const [message, setMessage] = useState([''])
 
-  return(
+  return (
     <div>
       <div className='container1' onClick={() => confirmInvoke(functionName, description, runtime, setMessage)}>
         <div className='container2' >
@@ -34,11 +33,10 @@ function DashButton(props) {
             </div>
           </div>
         </div>
-      <img src={logo} className='button-img' alt={logo}></img>
+        <img src={logo} className='button-img' alt={logo}></img>
       </div>
+      <div style={{ width: '100%', border: '0px', height: 'fit-content', marginTop: '10px', backgroundColor: '#101010', color: 'white' }} >{message}</div>
       <br></br>
-      <textarea style={{width:'90%',border:'0px'}} value={message} readOnly></textarea>
-      <hr></hr>
     </div>
   );
 }
@@ -47,30 +45,26 @@ function confirmInvoke(functionName, description, runtime, setMessage) {
   let answer = window.confirm('Invoke?')
 
   setMessage('Invoke...')
-  
-  if(answer) {
-    invoke(functionName, {}).then(function(result){
-      setMessage(
-        'StatusCode:' + result.StatusCode + '\r\n' +
-        'Payload:' + result.Payload
-      )
-      // window.alert(
-      //   'StatusCode:' + result.StatusCode + '\r\n' +
-      //   'Payload:' + JSON.stringify(result.Payload)
-      //   );
+
+  if (answer) {
+    invoke(functionName, {}).then(function (result) {
+      let message = []
+      message.push(<div>StatusCode: {result.StatusCode}</div>)
+      message.push(<div>Payload: {result.Payload}</div>)
+      setMessage(message)
     });
   } else {
     console.log('cancel')
   }
 }
 
-async function invoke(functionName, payload){
+async function invoke(functionName, payload) {
   let lambda = new AWS.Lambda();
 
   let params = {
-    FunctionName: functionName, 
+    FunctionName: functionName,
     Payload: JSON.stringify(payload),
-   };
+  };
   const response = await lambda.invoke(params).promise();
   return response;
 }

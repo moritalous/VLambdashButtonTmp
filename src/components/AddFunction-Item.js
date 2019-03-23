@@ -9,15 +9,13 @@ function AddFunctionItem(props){
   const description = f.Description
   const runtime = f.Runtime
   return(
-    <div>
-      
-      Name: {functionName}
-      <br></br>
+    <div style={{width:'90vw'}}>
+      <div style={{fontWeight:'bold'}}>{functionName}</div>
       Runtime: {runtime}
       <br></br>
       Description: {description}
       <br></br>
-      <button  onClick={() => addFunction(functionName, description, runtime)}>Add!</button>
+      <button style={{width:'100%'}} onClick={() => addFunction(functionName, description, runtime)}>Add!</button>
       <hr></hr>
     </div>
   );
