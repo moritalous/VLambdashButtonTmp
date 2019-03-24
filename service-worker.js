@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/VLambdashButtonTmp/precache-manifest.e6837e65bbc29f25cd1017db1ea07911.js"
+  "/VLambdashButtonTmp/precache-manifest.8a2a75ec150196a616991e47235ab63e.js"
 );
 
 workbox.clientsClaim();

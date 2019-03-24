@@ -1,13 +1,14 @@
 {
-  "main.css": "/VLambdashButtonTmp/static/css/main.ccfe5321.chunk.css",
-  "main.js": "/VLambdashButtonTmp/static/js/main.12dd64a9.chunk.js",
-  "main.js.map": "/VLambdashButtonTmp/static/js/main.12dd64a9.chunk.js.map",
+  "main.css": "/VLambdashButtonTmp/static/css/main.79d5e88f.chunk.css",
+  "main.js": "/VLambdashButtonTmp/static/js/main.bf625dd6.chunk.js",
+  "main.js.map": "/VLambdashButtonTmp/static/js/main.bf625dd6.chunk.js.map",
   "runtime~main.js": "/VLambdashButtonTmp/static/js/runtime~main.07118eda.js",
   "runtime~main.js.map": "/VLambdashButtonTmp/static/js/runtime~main.07118eda.js.map",
   "static/js/2.88a8259f.chunk.js": "/VLambdashButtonTmp/static/js/2.88a8259f.chunk.js",
   "static/js/2.88a8259f.chunk.js.map": "/VLambdashButtonTmp/static/js/2.88a8259f.chunk.js.map",
   "index.html": "/VLambdashButtonTmp/index.html",
-  "precache-manifest.e6837e65bbc29f25cd1017db1ea07911.js": "/VLambdashButtonTmp/precache-manifest.e6837e65bbc29f25cd1017db1ea07911.js",
+  "precache-manifest.8a2a75ec150196a616991e47235ab63e.js": "/VLambdashButtonTmp/precache-manifest.8a2a75ec150196a616991e47235ab63e.js",
   "service-worker.js": "/VLambdashButtonTmp/service-worker.js",
-  "static/css/main.ccfe5321.chunk.css.map": "/VLambdashButtonTmp/static/css/main.ccfe5321.chunk.css.map"
+  "static/css/main.79d5e88f.chunk.css.map": "/VLambdashButtonTmp/static/css/main.79d5e88f.chunk.css.map",
+  "static/media/AWS-Lambda_Lambda-Function_light-bg.svg": "/VLambdashButtonTmp/static/media/AWS-Lambda_Lambda-Function_light-bg.dc47335b.svg"
 }
