@@ -30,6 +30,8 @@
   margin: 0px;
   top: 14.535px;
   right: 12.535px;
+  /* background: #F0F0F0; */
+  background: linear-gradient(45deg,#EAEDED 0,#fff 100%)
 }
 
 .label-area {

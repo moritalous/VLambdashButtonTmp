@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Const from '../Const'
-import logo from '../AWS-Lambda_Lambda-Function_light-bg.png'
+import logo from '../AWS-Lambda_Lambda-Function_light-bg.svg'
 import './DashButton.css';
 
 import AWS from 'aws-sdk';
