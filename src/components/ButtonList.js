@@ -15,7 +15,6 @@ function ButtonList(){
   
     let list = []
     for(let f of functions) {
-      console.log(f)
       list.push(<DashButton key={Math.random()}>{f}</DashButton>)
     }
     setItem(list)  

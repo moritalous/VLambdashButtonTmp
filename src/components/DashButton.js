@@ -35,7 +35,7 @@ function DashButton(props) {
         </div>
         <img src={logo} className='button-img' alt={logo}></img>
       </div>
-      <div style={{ width: '100%', border: '0px', height: 'fit-content', marginTop: '10px', backgroundColor: '#101010', color: 'white' }} >{message}</div>
+      <div style={{width: '100%', border: '0px', height: 'fit-content', marginTop: '10px', backgroundColor: '#101010', color: 'white', wordWrap:'break-word'}} >{message}</div>
       <br></br>
     </div>
   );
@@ -48,8 +48,8 @@ function confirmInvoke(functionName, description, runtime, setMessage) {
     setMessage('Invoke...')
     invoke(functionName, {}).then(function (result) {
       let message = []
-      message.push(<div>StatusCode: {result.StatusCode}</div>)
-      message.push(<div>Payload: {result.Payload}</div>)
+      message.push(<div key={'statusCode'} >StatusCode: {result.StatusCode}</div>)
+      message.push(<div key={'payload'}>Payload: {result.Payload}</div>)
       setMessage(message)
     });
   } else {
